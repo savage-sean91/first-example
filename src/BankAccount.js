@@ -1,5 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+/* import Box from "@mui/material/Box";
+import { Typography } from "@mui/material"; */
+import {
+  Box, 
+  Button,
+  TextField, 
+  Typography
+} from "@mui/material";
 
 class BankAccount extends React.Component {
   constructor(props) {
@@ -45,9 +53,9 @@ class BankAccount extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Bank Account</h1>
-        <h2>{this.props.name}</h2>
+      <Box ml={4} mr={4} p={2}>
+        <Typography variant={'h1'}>Bank Account</Typography>
+        <Typography variant={'h2'}>{this.props.name}</Typography>
         <div>Balance: ${this.state.balance}</div>
         <hr />
         <section>
@@ -59,7 +67,7 @@ class BankAccount extends React.Component {
           <button onClick={this.deposit}>Deposit</button>
           <button onClick={this.addHundred}>Add Hundred</button>
         </section>
-      </div>
+      </Box>
     );
   }
 }
